@@ -1,17 +1,18 @@
 import React from "react";
 import styles from "./DisplayMovies.module.css";
 import Movie from "./Movie";
-import { useQuery } from "@tanstack/react-query";
-import axios from "axios";
-type Props = { apikey: string };
+import  { AxiosResponse } from "axios";
 
-const DisplayMovies = ({ apikey }: Props) => {
 
-	const { isLoading, error, data: MoviesData } = useQuery(["movies"], () => {
-		return axios(
-			`https://api.themoviedb.org/3/movie/popular?api_key=${apikey}`
-		);
-	});
+type Props = {
+error:unknown,
+isLoading:boolean,
+isFetching:boolean,
+MoviesData :AxiosResponse<any, any> |undefined
+};
+
+const DisplayMovies = ({error, isLoading, isFetching, MoviesData}: Props) => {
+	
 
 	if (error) {
 		return (
@@ -23,11 +24,12 @@ const DisplayMovies = ({ apikey }: Props) => {
 		);
 	}
 
-	if (isLoading) {
+	if (isLoading || isFetching) {
 		return <h1>Loading...</h1>;
 	}
 
-	let MovieElements = MoviesData?.data.results.map((movie) => {
+
+	let MovieElements = MoviesData?.data.results.map((movie:any) => {
 		return (
 			<Movie
 				title={movie.original_title}

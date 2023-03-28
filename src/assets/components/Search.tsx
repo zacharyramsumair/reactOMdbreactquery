@@ -2,18 +2,22 @@ import React, {useState} from 'react'
 import styles from './Search.module.css'
 import { BsArrowRight } from 'react-icons/bs';
 import { BiSearchAlt2 } from 'react-icons/bi';
+import { QueryObserverResult, RefetchOptions, RefetchQueryFilters } from '@tanstack/react-query';
+import { AxiosResponse } from 'axios';
 
 
 type Props = {
     query:string,
     setQuery: React.Dispatch<React.SetStateAction<string>>,
+    refetch: <TPageData>(options?: (RefetchOptions & RefetchQueryFilters<TPageData>) | undefined) => Promise<QueryObserverResult<AxiosResponse<any, any>, unknown>>
 }
 
-const Search = ({query, setQuery}: Props) => {
+const Search = ({query, setQuery,  refetch}: Props) => {
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>)=>{
         e.preventDefault()
         console.log("submitted" , query)
+        refetch()
     }
 
   return (
