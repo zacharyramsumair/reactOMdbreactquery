@@ -1,14 +1,21 @@
 import React from 'react'
 import styles from "./Movie.module.css"
 
-type Props = {}
+type Props = {
+  title:string,
+  date:string,
+  overview:string,
+  poster:string,
+  rating:number,
+  key:number,
+}
 
 const Movie = (props: Props) => {
   return (
     <div className={styles.movie}>
-        <img className={styles.image} src="https://image.tmdb.org/t/p/w500/gOnmaxHo0412UVr1QM5Nekv1xPi.jpg" alt="" />
-        <p className={styles.title}>Cocaine Bear</p>
-        <p className={styles.info}>2023 • 6.5</p>
+        <img className={styles.image} src={props.poster} alt="" />
+        <p className={styles.title}>{props.title}</p>
+        <p className={styles.info}>{props.date.slice(0, 4)} • {props.rating}</p>
     </div>
   )
 }
