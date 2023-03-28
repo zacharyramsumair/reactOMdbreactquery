@@ -18,6 +18,8 @@ const Search = ({query, setQuery,  refetch}: Props) => {
         e.preventDefault()
         console.log("submitted" , query)
         refetch()
+      
+
     }
 
   return (
