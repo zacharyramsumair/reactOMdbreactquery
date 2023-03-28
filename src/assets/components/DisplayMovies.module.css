@@ -1,3 +1,34 @@
-.display{
-    color: red;
+.displayMovies{
+ 
+    color: #fff;
+      background-color: #3e6282;
+
+
+    
+}
+
+
+.displayHeader{
+    /* font-size: 2rem; */
+    padding: 1em 0;
+    margin: 0 0.5em;
+    text-align: left;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    font-weight: 400;
+    /* margin-bottom: 2em; */
+    /* color: #FFF; */
+    /* outline:1px solid red; */
+
+}
+
+
+.moviesGrid{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    padding: 0.5em;
+    gap: 0.5em;
+    /* margin: 0.5em; */
+    /* outline:1px solid red; */
+
 }

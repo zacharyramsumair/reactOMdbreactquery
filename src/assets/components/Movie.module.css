@@ -1,0 +1,21 @@
+.image {
+	width: 100%;
+	/* outline:1px solid red; */
+}
+
+.title,
+.info {
+	text-align: left;
+	font-size: 1.3rem;
+	font-weight: 600;
+    margin-left: 0.5em;
+	/* outline:1px solid red; */
+}
+
+.info {
+	margin-bottom: 1em;
+	font-size: 1.3rem;
+	font-weight: 400;
+    color: #aaa;
+	/* outline:1px solid red; */
+}
