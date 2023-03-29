@@ -18,7 +18,7 @@ const Tooltip = (props: Props) => {
     const [coords, setCoords] = useState({x: 0, y: 0});
 
     useEffect(()=>{
-        const handleWindowMouseMove = (e) => {
+        const handleWindowMouseMove = (e:MouseEvent) => {
             setCoords({
               x: e.clientX,
               y: e.clientY,
