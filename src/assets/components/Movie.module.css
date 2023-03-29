@@ -1,3 +1,7 @@
+.movie{
+	position: relative;
+}
+
 .image {
 	width: 100%;
 	/* outline:1px solid red; */
@@ -13,9 +17,16 @@
 }
 
 .info {
+	display: flex;
 	margin-bottom: 1em;
 	font-size: 1.3rem;
 	font-weight: 400;
     color: #aaa;
+	align-items: center;
 	/* outline:1px solid red; */
+}
+
+
+.star{
+	margin: 0 5px;
 }
