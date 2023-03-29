@@ -25,7 +25,15 @@ const DisplayMovies = ({error, isLoading, isFetching, MoviesData}: Props) => {
 	}
 
 	if (isLoading || isFetching) {
-		return <h1>Loading...</h1>;
+		return (
+    <section className={styles.displayMovies}>
+    {/* {console.log(MoviesData)} */}
+    <h2 className={styles.displayHeader}>Trending Now</h2>
+    <div className={styles.moviesGrid}>
+    <h1>Loading...</h1>;
+    </div>
+  </section>
+    )
 	}
 
 

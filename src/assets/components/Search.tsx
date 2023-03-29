@@ -33,7 +33,7 @@ const Search = ({query, setQuery,  refetch}: Props) => {
     </div>
     <button className={styles.submitButton}><BsArrowRight/></button>
     </form>
-    {query}
+    {/* {query} */}
     
 </section>
   )

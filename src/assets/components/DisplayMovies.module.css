@@ -32,3 +32,30 @@
     /* outline:1px solid red; */
 
 }
+
+
+@media screen and (max-width:800px) {
+    .moviesGrid{
+
+        grid-template-columns: repeat(3, 1fr);
+    
+    }
+}
+
+
+
+@media screen and (max-width:600px) {
+    .moviesGrid{
+
+        grid-template-columns: repeat(2, 1fr);
+    
+    }
+ }
+
+ @media screen and (max-width:450px) {
+    .moviesGrid{
+
+        grid-template-columns: repeat(1, 1fr);
+    
+    }
+ }
